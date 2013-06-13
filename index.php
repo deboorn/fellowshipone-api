@@ -90,8 +90,9 @@
 		
 		# edit person (array or ojbect)
 		/*
-		$model = $f1->json()->people(Daniel)->edit()->get();
-		$model['person']['firstName'] = 'Brandy';
+		$personId = 12121222;
+		$model = $f1->json()->people($personId)->edit()->get();
+		$model['person']['firstName'] = 'Daniel';
 		$model = $f1->people($model['person']['@id'])->update($model);
 		*/
 		
