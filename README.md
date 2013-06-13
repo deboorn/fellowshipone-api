@@ -2,7 +2,7 @@
 Fellowship One API
 ==============
 
-Fellowship One API Implentation (http://developer.fellowshipone.com/))
+Fellowship One API Implentation (http://developer.fellowshipone.com/)
 --------------
 
 - PHP 5 Chainable API Implementation of Fellowship One API
