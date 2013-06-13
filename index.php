@@ -35,15 +35,7 @@
 	
 	try{
 		
-		$f1 = \F1\API::forge();
-		
-		/*
-		$f1->paths['people_edit'] = array(
-			'verb' => 'GET',
-			'path'=>'/v1/People/{id}');
-		file_put_contents('vendor/com.rapiddigitalllc/f1/api_paths.json', json_encode($f1->paths));
-		*/
-		
+		$f1 = \F1\API::forge();//2nd party auto sign-in
 		
 		# Show available chain paths by id
 		//var_dump($f1->paths);
