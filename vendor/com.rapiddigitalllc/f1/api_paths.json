@@ -1,1 +1,646 @@
-{"households_search":{"verb":"GET","path":"\/v1\/Households\/Search"},"households_show":{"verb":"GET","path":"\/v1\/Households\/{id}"},"households_edit":{"verb":"GET","path":"\/v1\/Households\/{id}\/Edit"},"households_new":{"verb":"GET","path":"\/v1\/Households\/New"},"households_create":{"verb":"POST","path":"\/v1\/Households"},"households_update":{"verb":"PUT","path":"\/v1\/Households\/{id}"},"people_search":{"verb":"GET","path":"\/v1\/People\/Search"},"households_people_list":{"verb":"GET","path":"\/v1\/Households\/{householdID}\/People"},"people_show":{"verb":"GET","path":"\/v1\/People\/{id}"},"people_edit":{"verb":"GET","path":"\/v1\/People\/{id}"},"people_new":{"verb":"GET","path":"\/v1\/People\/New"},"people_create":{"verb":"POST","path":"\/v1\/People"},"people_update":{"verb":"PUT","path":"\/v1\/People\/{id}"},"households_addresses_list":{"verb":"GET","path":"\/v1\/Households\/{householdID}\/Addresses"},"addresses_show":{"verb":"GET","path":"\/v1\/Addresses\/{id}"},"addresses_edit":{"verb":"GET","path":"\/v1\/Addresses\/{id}\/Edit"},"addresses_new":{"verb":"GET","path":"\/v1\/Addresses\/New"},"addresses_create":{"verb":"POST","path":"\/v1\/Addresses"},"addresses_update":{"verb":"PUT","path":"\/v1\/Addresses\/{id}"},"people_attributegroups_list":{"verb":"GET","path":"\/v1\/People\/AttributeGroups"},"people_attributegroups_show":{"verb":"GET","path":"\/v1\/People\/AttributeGroups\/{id}"},"people_attributegroups_attributes_list":{"verb":"GET","path":"\/v1\/People\/AttributeGroups\/{attributeGroupID}\/Attributes"},"people_attributegroups_attributes_show":{"verb":"GET","path":"\/v1\/People\/AttributeGroups\/{attributeGroupID}\/Attributes\/{id}"},"households_communications_list":{"verb":"GET","path":"\/v1\/Households\/{householdID}\/Communications"},"communications_show":{"verb":"GET","path":"\/v1\/Communications\/{id}"},"communications_edit":{"verb":"GET","path":"\/v1\/Communications\/{id}\/Edit"},"communications_new":{"verb":"GET","path":"\/v1\/Communications\/New"},"communications_create":{"verb":"POST","path":"\/v1\/Communications"},"communications_update":{"verb":"PUT","path":"\/v1\/Communications\/{id}"},"communications_communicationtypes_list":{"verb":"GET","path":"\/v1\/Communications\/CommunicationTypes"},"communications_communicationtypes_show":{"verb":"GET","path":"\/v1\/Communications\/CommunicationTypes\/{id}"},"people_denominations_list":{"verb":"GET","path":"\/v1\/People\/Denominations"},"people_denominations_show":{"verb":"GET","path":"\/v1\/People\/Denominations\/{id}"},"people_occupations_list":{"verb":"GET","path":"\/v1\/People\/Occupations"},"people_occupations_show":{"verb":"GET","path":"\/v1\/People\/Occupations\/{id}"},"people_schools_list":{"verb":"GET","path":"\/v1\/People\/Schools"},"people_schools_show":{"verb":"GET","path":"\/v1\/People\/Schools\/{id}"},"people_statuses_list":{"verb":"GET","path":"\/v1\/People\/Statuses"},"people_statuses_show":{"verb":"GET","path":"\/v1\/People\/Statuses\/{id}"},"people_statuses_substatuses_list":{"verb":"GET","path":"\/v1\/People\/Statuses\/{statusID}\/SubStatuses"},"people_statuses_substatuses_show":{"verb":"GET","path":"\/v1\/People\/Statuses\/{statusID}\/SubStatuses\/{id}"},"requirements_show":{"verb":"GET","path":"\/v1\/Requirements\/{id}"},"requirements_edit":{"verb":"GET","path":"\/v1\/Requirements\/{id}\/Edit"},"requirements_new":{"verb":"GET","path":"\/v1\/Requirements\/New"},"requirements_create":{"verb":"POST","path":"\/v1\/Requirements"},"requirements_update":{"verb":"PUT","path":"\/v1\/Requirements\/{id}"},"requirements_requirementstatuses_list":{"verb":"GET","path":"\/v1\/requirements\/requirementStatuses"},"requirements_requirementstatuses_show":{"verb":"GET","path":"\/v1\/requirements\/requirementStatuses\/{id}"},"requirements_backgroundcheckstatuses_list":{"verb":"GET","path":"\/v1\/requirements\/backgroundCheckStatuses"},"requirements_backgroundcheckstatuses_show":{"verb":"GET","path":"\/v1\/requirements\/backgroundCheckStatuses\/{id}"},"people_requirements_search":{"verb":"GET","path":"\/v1\/People\/Requirements\/Search"},"people_requirements_show":{"verb":"GET","path":"\/v1\/People\/{personID}\/Requirements\/{id}"},"people_requirements_new":{"verb":"GET","path":"\/v1\/People\/Requirements\/New"},"people_requirements_create":{"verb":"POST","path":"\/v1\/People\/{personID}\/Requirements"},"people_requirements_update":{"verb":"PUT","path":"\/v1\/People\/{personID}\/Requirements\/{id}"},"people_requirements_documents_show":{"verb":"GET","path":"\/v1\/People\/{personID}\/Requirements\/{id}\/Documents"},"people_requirements_documents_create":{"verb":"POST","path":"\/v1\/People\/{personID}\/Requirements\/{id}\/Documents"},"people_requirements_documents_update":{"verb":"PUT","path":"\/v1\/People\/{personID}\/Requirements\/{id}\/Documents"},"accounts_show":{"verb":"GET","path":"\/giving\/v1\/accounts\/{id}"},"accounts_edit":{"verb":"GET","path":"\/giving\/v1\/accounts\/{id}\/Edit"},"accounts_new":{"verb":"GET","path":"\/giving\/v1\/accounts\/new"},"accounts_create":{"verb":"POST","path":"\/giving\/v1\/accounts"},"accounts_update":{"verb":"PUT","path":"\/giving\/v1\/accounts\/{id}"},"accounts_accounttypes_list":{"verb":"GET","path":"\/giving\/v1\/accounts\/accounttypes"},"accounts_accounttypes_show":{"verb":"GET","path":"\/giving\/v1\/accounts\/accounttypes\/{id}"},"batches_search":{"verb":"GET","path":"\/giving\/v1\/batches\/search"},"batches_show":{"verb":"GET","path":"\/giving\/v1\/batches\/{id}"},"batches_edit":{"verb":"GET","path":"\/giving\/v1\/batches\/{id}\/edit"},"batches_new":{"verb":"GET","path":"\/giving\/v1\/batches\/New"},"batches_create":{"verb":"POST","path":"\/giving\/v1\/batches"},"batches_update":{"verb":"PUT","path":"\/giving\/v1\/batches\/{id}"},"batches_batchtypes_list":{"verb":"GET","path":"\/giving\/v1\/batches\/batchtypes"},"batches_batchtypes_show":{"verb":"GET","path":"\/giving\/v1\/batches\/batchtypes\/{id}"},"contributionreceipts_search{parameter}_search":{"verb":"GET","path":"\/giving\/v1\/contributionreceipts\/search{parameter}"},"contributionreceipts_show":{"verb":"GET","path":"\/giving\/v1\/contributionreceipts\/{id}"},"contributionreceipts_edit":{"verb":"GET","path":"\/giving\/v1\/contributionreceipts\/{id}\/edit"},"contributionreceipts_new":{"verb":"GET","path":"\/giving\/v1\/contributionreceipts\/new"},"contributionreceipts_create":{"verb":"POST","path":"\/giving\/v1\/contributionreceipts"},"contributionreceipts_update":{"verb":"PUT","path":"\/giving\/v1\/contributionreceipts\/{id}"},"contributiontypes_list":{"verb":"GET","path":"\/giving\/v1\/contributiontypes"},"contributiontypes_show":{"verb":"GET","path":"\/giving\/v1\/contributiontypes\/{id}"},"funds_list":{"verb":"GET","path":"\/giving\/v1\/funds"},"funds_show":{"verb":"GET","path":"\/giving\/v1\/funds\/{id}"},"funds_edit":{"verb":"GET","path":"\/giving\/v1\/funds\/{id}\/edit"},"funds_new":{"verb":"GET","path":"\/giving\/v1\/funds\/new"},"funds_create":{"verb":"POST","path":"\/giving\/v1\/funds"},"funds_update":{"verb":"PUT","path":"\/giving\/v1\/funds\/{id}"},"funds_fundtypes_list":{"verb":"GET","path":"\/giving\/v1\/funds\/fundtypes"},"funds_fundtypes_show":{"verb":"GET","path":"\/giving\/v1\/funds\/fundtypes\/{id}"},"funds_pledgedrives_list":{"verb":"GET","path":"\/giving\/v1\/funds\/{fundID}\/pledgedrives"},"pledgedrives_show":{"verb":"GET","path":"\/giving\/v1\/pledgedrives\/{id}"},"pledgedrives_edit":{"verb":"GET","path":"\/giving\/v1\/pledgedrives\/{id}\/Edit"},"pledgedrives_new":{"verb":"GET","path":"\/giving\/v1\/pledgedrives\/New"},"pledgedrives_create":{"verb":"POST","path":"\/giving\/v1\/pledgedrives"},"pledgedrives_update":{"verb":"PUT","path":"\/giving\/v1\/pledgedrives\/{id}"},"batches_rdcbatches_list":{"verb":"GET","path":"\/giving\/v1\/batches\/{batchID}\/rdcbatches"},"rdcbatches_show":{"verb":"GET","path":"\/giving\/v1\/rdcbatches\/{id}"},"rdcbatches_edit":{"verb":"GET","path":"\/giving\/v1\/rdcbatches\/{id}\/Edit"},"rdcbatches_new":{"verb":"GET","path":"\/giving\/v1\/rdcbatches\/New"},"rdcbatches_create":{"verb":"POST","path":"\/giving\/v1\/rdcbatches"},"rdcbatches_update":{"verb":"PUT","path":"\/giving\/v1\/rdcbatches\/{id}"},"contributionreceipts_referenceimages_show":{"verb":"GET","path":"\/giving\/v1\/contributionreceipts\/{contributionReceiptId}\/ReferenceImages\/{id}"},"contributionreceipts_referenceimages_create":{"verb":"POST","path":"\/giving\/v1\/contributionreceipts\/{contributionReceiptId}\/ReferenceImages"},"funds_subfunds_list":{"verb":"GET","path":"\/giving\/v1\/funds\/{fundID}\/subfunds"},"funds_subfunds_show":{"verb":"GET","path":"\/giving\/v1\/funds\/{fundID}\/subfunds\/{id}"},"subfunds_edit":{"verb":"GET","path":"\/giving\/v1\/subfunds\/{id}\/edit"},"subfunds_new":{"verb":"GET","path":"\/giving\/v1\/subfunds\/new"},"subfunds_create":{"verb":"POST","path":"\/giving\/v1\/subfunds"},"subfunds_update":{"verb":"PUT","path":"\/giving\/v1\/subfunds\/{id}"},"groups_search":{"verb":"GET","path":"\/groups\/v1\/groups\/search"},"grouptypes_groups_list":{"verb":"GET","path":"\/groups\/v1\/grouptypes\/{id}\/groups"},"groups_show":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}"},"groups_edit":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/Edit"},"groups_new":{"verb":"GET","path":"\/groups\/v1\/groups\/New"},"groups_create":{"verb":"POST","path":"\/groups\/v1\/groups"},"groups_update":{"verb":"PUT","path":"\/groups\/v1\/groups\/{id}"},"groups_members_search":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/members\/search"},"groups_members_list":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/members"},"groups_members_show":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/members\/{id}"},"groups_members_edit":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/members\/{id}\/edit"},"groups_members_new":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/members\/new"},"groups_members_create":{"verb":"POST","path":"\/groups\/v1\/groups\/{id}\/members"},"groups_members_update":{"verb":"PUT","path":"\/groups\/v1\/groups\/{id}\/members\/{id}"},"membertypes_list":{"verb":"GET","path":"\/groups\/v1\/membertypes"},"membertypes_show":{"verb":"GET","path":"\/groups\/v1\/membertypes\/{id}"},"prospects_new":{"verb":"POST","path":"\/groups\/v1\/prospects\/new"},"groups_prospects_create":{"verb":"POST","path":"\/groups\/v1\/groups\/{id}\/prospects"},"groups_events_list":{"verb":"GET","path":"\/groups\/v1\/groups\/{id}\/events"},"daterangetypes_list":{"verb":"GET","path":"\/groups\/v1\/daterangetypes"},"daterangetypes_show":{"verb":"GET","path":"\/groups\/v1\/daterangetypes\/{id}"},"genders_list":{"verb":"GET","path":"\/groups\/v1\/genders"},"genders_show":{"verb":"GET","path":"\/groups\/v1\/genders\/{id}"},"maritalstatuses_list":{"verb":"GET","path":"\/groups\/v1\/maritalstatuses"},"maritalstatuses_show":{"verb":"GET","path":"\/groups\/v1\/maritalstatuses\/{id}"},"timezones_list":{"verb":"GET","path":"\/groups\/v1\/timezones"},"timezones_show":{"verb":"GET","path":"\/groups\/v1\/timezones\/{id}"},"events_list":{"verb":"GET","path":"\/events\/v1\/events"},"events_show":{"verb":"GET","path":"\/events\/v1\/events\/{id}"},"events_edit":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/edit"},"events_update":{"verb":"PUT","path":"\/events\/v1\/events\/{id}"},"events_schedules_list":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/schedules"},"events_schedules_show":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/schedules\/{id}"},"events_schedules_edit":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/schedules\/{id}\/edit"},"events_schedules_new":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/schedules\/new"},"events_schedules_create":{"verb":"POST","path":"\/events\/v1\/events\/{id}\/schedules"},"events_schedules_update":{"verb":"PUT","path":"\/events\/v1\/events\/{id}\/schedules\/{id}"},"events_locations_list":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/locations"},"events_locations_show":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/locations\/{id}"},"events_locations_edit":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/locations\/{id}\/edit"},"events_locations_new":{"verb":"GET","path":"\/events\/v1\/events\/{id}\/locations\/new"},"events_locations_create":{"verb":"POST","path":"\/events\/v1\/events\/{id}\/locations"},"events_locations_update":{"verb":"PUT","path":"\/events\/v1\/events\/{id}\/locations\/{id}"},"recurrencetypes_list":{"verb":"GET","path":"\/events\/v1\/recurrencetypes"},"recurrencetypes_show":{"verb":"GET","path":"\/events\/v1\/recurrencetypes\/{id}"}}
+{
+    "households_search": {
+        "verb": "GET",
+        "path": "/v1/Households/Search"
+    },
+    "households_show": {
+        "verb": "GET",
+        "path": "/v1/Households/{id}"
+    },
+    "households_edit": {
+        "verb": "GET",
+        "path": "/v1/Households/{id}/Edit"
+    },
+    "households_new": {
+        "verb": "GET",
+        "path": "/v1/Households/New"
+    },
+    "households_create": {
+        "verb": "POST",
+        "path": "/v1/Households"
+    },
+    "households_update": {
+        "verb": "PUT",
+        "path": "/v1/Households/{id}"
+    },
+    "people_search": {
+        "verb": "GET",
+        "path": "/v1/People/Search"
+    },
+    "households_people_list": {
+        "verb": "GET",
+        "path": "/v1/Households/{householdID}/People"
+    },
+    "people_show": {
+        "verb": "GET",
+        "path": "/v1/People/{id}"
+    },
+    "people_edit": {
+        "verb": "GET",
+        "path": "/v1/People/{id}"
+    },
+    "people_new": {
+        "verb": "GET",
+        "path": "/v1/People/New"
+    },
+    "people_create": {
+        "verb": "POST",
+        "path": "/v1/People"
+    },
+    "people_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{id}"
+    },
+    "households_addresses_list": {
+        "verb": "GET",
+        "path": "/v1/Households/{householdID}/Addresses"
+    },
+    "addresses_show": {
+        "verb": "GET",
+        "path": "/v1/Addresses/{id}"
+    },
+    "addresses_edit": {
+        "verb": "GET",
+        "path": "/v1/Addresses/{id}/Edit"
+    },
+    "addresses_new": {
+        "verb": "GET",
+        "path": "/v1/Addresses/New"
+    },
+    "addresses_create": {
+        "verb": "POST",
+        "path": "/v1/Addresses"
+    },
+    "addresses_update": {
+        "verb": "PUT",
+        "path": "/v1/Addresses/{id}"
+    },
+    "people_attributegroups_list": {
+        "verb": "GET",
+        "path": "/v1/People/AttributeGroups"
+    },
+    "people_attributegroups_show": {
+        "verb": "GET",
+        "path": "/v1/People/AttributeGroups/{id}"
+    },
+    "people_attributegroups_attributes_list": {
+        "verb": "GET",
+        "path": "/v1/People/AttributeGroups/{attributeGroupID}/Attributes"
+    },
+    "people_attributegroups_attributes_show": {
+        "verb": "GET",
+        "path": "/v1/People/AttributeGroups/{attributeGroupID}/Attributes/{id}"
+    },
+    "households_communications_list": {
+        "verb": "GET",
+        "path": "/v1/Households/{householdID}/Communications"
+    },
+    "communications_show": {
+        "verb": "GET",
+        "path": "/v1/Communications/{id}"
+    },
+    "communications_edit": {
+        "verb": "GET",
+        "path": "/v1/Communications/{id}/Edit"
+    },
+    "communications_new": {
+        "verb": "GET",
+        "path": "/v1/Communications/New"
+    },
+    "communications_create": {
+        "verb": "POST",
+        "path": "/v1/Communications"
+    },
+    "communications_update": {
+        "verb": "PUT",
+        "path": "/v1/Communications/{id}"
+    },
+    "communications_communicationtypes_list": {
+        "verb": "GET",
+        "path": "/v1/Communications/CommunicationTypes"
+    },
+    "communications_communicationtypes_show": {
+        "verb": "GET",
+        "path": "/v1/Communications/CommunicationTypes/{id}"
+    },
+    "people_denominations_list": {
+        "verb": "GET",
+        "path": "/v1/People/Denominations"
+    },
+    "people_denominations_show": {
+        "verb": "GET",
+        "path": "/v1/People/Denominations/{id}"
+    },
+    "people_occupations_list": {
+        "verb": "GET",
+        "path": "/v1/People/Occupations"
+    },
+    "people_occupations_show": {
+        "verb": "GET",
+        "path": "/v1/People/Occupations/{id}"
+    },
+    "people_schools_list": {
+        "verb": "GET",
+        "path": "/v1/People/Schools"
+    },
+    "people_schools_show": {
+        "verb": "GET",
+        "path": "/v1/People/Schools/{id}"
+    },
+    "people_statuses_list": {
+        "verb": "GET",
+        "path": "/v1/People/Statuses"
+    },
+    "people_statuses_show": {
+        "verb": "GET",
+        "path": "/v1/People/Statuses/{id}"
+    },
+    "people_statuses_substatuses_list": {
+        "verb": "GET",
+        "path": "/v1/People/Statuses/{statusID}/SubStatuses"
+    },
+    "people_statuses_substatuses_show": {
+        "verb": "GET",
+        "path": "/v1/People/Statuses/{statusID}/SubStatuses/{id}"
+    },
+    "requirements_show": {
+        "verb": "GET",
+        "path": "/v1/Requirements/{id}"
+    },
+    "requirements_edit": {
+        "verb": "GET",
+        "path": "/v1/Requirements/{id}/Edit"
+    },
+    "requirements_new": {
+        "verb": "GET",
+        "path": "/v1/Requirements/New"
+    },
+    "requirements_create": {
+        "verb": "POST",
+        "path": "/v1/Requirements"
+    },
+    "requirements_update": {
+        "verb": "PUT",
+        "path": "/v1/Requirements/{id}"
+    },
+    "requirements_requirementstatuses_list": {
+        "verb": "GET",
+        "path": "/v1/requirements/requirementStatuses"
+    },
+    "requirements_requirementstatuses_show": {
+        "verb": "GET",
+        "path": "/v1/requirements/requirementStatuses/{id}"
+    },
+    "requirements_backgroundcheckstatuses_list": {
+        "verb": "GET",
+        "path": "/v1/requirements/backgroundCheckStatuses"
+    },
+    "requirements_backgroundcheckstatuses_show": {
+        "verb": "GET",
+        "path": "/v1/requirements/backgroundCheckStatuses/{id}"
+    },
+    "people_requirements_search": {
+        "verb": "GET",
+        "path": "/v1/People/Requirements/Search"
+    },
+    "people_requirements_show": {
+        "verb": "GET",
+        "path": "/v1/People/{personID}/Requirements/{id}"
+    },
+    "people_requirements_new": {
+        "verb": "GET",
+        "path": "/v1/People/Requirements/New"
+    },
+    "people_requirements_create": {
+        "verb": "POST",
+        "path": "/v1/People/{personID}/Requirements"
+    },
+    "people_requirements_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{personID}/Requirements/{id}"
+    },
+    "people_requirements_documents_show": {
+        "verb": "GET",
+        "path": "/v1/People/{personID}/Requirements/{id}/Documents"
+    },
+    "people_requirements_documents_create": {
+        "verb": "POST",
+        "path": "/v1/People/{personID}/Requirements/{id}/Documents"
+    },
+    "people_requirements_documents_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{personID}/Requirements/{id}/Documents"
+    },
+    "accounts_show": {
+        "verb": "GET",
+        "path": "/giving/v1/accounts/{id}"
+    },
+    "accounts_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/accounts/{id}/Edit"
+    },
+    "accounts_new": {
+        "verb": "GET",
+        "path": "/giving/v1/accounts/new"
+    },
+    "accounts_create": {
+        "verb": "POST",
+        "path": "/giving/v1/accounts"
+    },
+    "accounts_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/accounts/{id}"
+    },
+    "accounts_accounttypes_list": {
+        "verb": "GET",
+        "path": "/giving/v1/accounts/accounttypes"
+    },
+    "accounts_accounttypes_show": {
+        "verb": "GET",
+        "path": "/giving/v1/accounts/accounttypes/{id}"
+    },
+    "batches_search": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/search"
+    },
+    "batches_show": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/{id}"
+    },
+    "batches_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/{id}/edit"
+    },
+    "batches_new": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/New"
+    },
+    "batches_create": {
+        "verb": "POST",
+        "path": "/giving/v1/batches"
+    },
+    "batches_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/batches/{id}"
+    },
+    "batches_batchtypes_list": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/batchtypes"
+    },
+    "batches_batchtypes_show": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/batchtypes/{id}"
+    },
+    "contributionreceipts_search{parameter}_search": {
+        "verb": "GET",
+        "path": "/giving/v1/contributionreceipts/search{parameter}"
+    },
+    "contributionreceipts_show": {
+        "verb": "GET",
+        "path": "/giving/v1/contributionreceipts/{id}"
+    },
+    "contributionreceipts_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/contributionreceipts/{id}/edit"
+    },
+    "contributionreceipts_new": {
+        "verb": "GET",
+        "path": "/giving/v1/contributionreceipts/new"
+    },
+    "contributionreceipts_create": {
+        "verb": "POST",
+        "path": "/giving/v1/contributionreceipts"
+    },
+    "contributionreceipts_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/contributionreceipts/{id}"
+    },
+    "contributiontypes_list": {
+        "verb": "GET",
+        "path": "/giving/v1/contributiontypes"
+    },
+    "contributiontypes_show": {
+        "verb": "GET",
+        "path": "/giving/v1/contributiontypes/{id}"
+    },
+    "funds_list": {
+        "verb": "GET",
+        "path": "/giving/v1/funds"
+    },
+    "funds_show": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/{id}"
+    },
+    "funds_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/{id}/edit"
+    },
+    "funds_new": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/new"
+    },
+    "funds_create": {
+        "verb": "POST",
+        "path": "/giving/v1/funds"
+    },
+    "funds_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/funds/{id}"
+    },
+    "funds_fundtypes_list": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/fundtypes"
+    },
+    "funds_fundtypes_show": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/fundtypes/{id}"
+    },
+    "funds_pledgedrives_list": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/{fundID}/pledgedrives"
+    },
+    "pledgedrives_show": {
+        "verb": "GET",
+        "path": "/giving/v1/pledgedrives/{id}"
+    },
+    "pledgedrives_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/pledgedrives/{id}/Edit"
+    },
+    "pledgedrives_new": {
+        "verb": "GET",
+        "path": "/giving/v1/pledgedrives/New"
+    },
+    "pledgedrives_create": {
+        "verb": "POST",
+        "path": "/giving/v1/pledgedrives"
+    },
+    "pledgedrives_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/pledgedrives/{id}"
+    },
+    "batches_rdcbatches_list": {
+        "verb": "GET",
+        "path": "/giving/v1/batches/{batchID}/rdcbatches"
+    },
+    "rdcbatches_show": {
+        "verb": "GET",
+        "path": "/giving/v1/rdcbatches/{id}"
+    },
+    "rdcbatches_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/rdcbatches/{id}/Edit"
+    },
+    "rdcbatches_new": {
+        "verb": "GET",
+        "path": "/giving/v1/rdcbatches/New"
+    },
+    "rdcbatches_create": {
+        "verb": "POST",
+        "path": "/giving/v1/rdcbatches"
+    },
+    "rdcbatches_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/rdcbatches/{id}"
+    },
+    "contributionreceipts_referenceimages_show": {
+        "verb": "GET",
+        "path": "/giving/v1/contributionreceipts/{contributionReceiptId}/ReferenceImages/{id}"
+    },
+    "contributionreceipts_referenceimages_create": {
+        "verb": "POST",
+        "path": "/giving/v1/contributionreceipts/{contributionReceiptId}/ReferenceImages"
+    },
+    "funds_subfunds_list": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/{fundID}/subfunds"
+    },
+    "funds_subfunds_show": {
+        "verb": "GET",
+        "path": "/giving/v1/funds/{fundID}/subfunds/{id}"
+    },
+    "subfunds_edit": {
+        "verb": "GET",
+        "path": "/giving/v1/subfunds/{id}/edit"
+    },
+    "subfunds_new": {
+        "verb": "GET",
+        "path": "/giving/v1/subfunds/new"
+    },
+    "subfunds_create": {
+        "verb": "POST",
+        "path": "/giving/v1/subfunds"
+    },
+    "subfunds_update": {
+        "verb": "PUT",
+        "path": "/giving/v1/subfunds/{id}"
+    },
+    "groups_search": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/search"
+    },
+    "grouptypes_groups_list": {
+        "verb": "GET",
+        "path": "/groups/v1/grouptypes/{id}/groups"
+    },
+    "groups_show": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}"
+    },
+    "groups_edit": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/Edit"
+    },
+    "groups_new": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/New"
+    },
+    "groups_create": {
+        "verb": "POST",
+        "path": "/groups/v1/groups"
+    },
+    "groups_update": {
+        "verb": "PUT",
+        "path": "/groups/v1/groups/{id}"
+    },
+    "groups_members_search": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/members/search"
+    },
+    "groups_members_list": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/members"
+    },
+    "groups_members_show": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/members/{id}"
+    },
+    "groups_members_edit": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/members/{id}/edit"
+    },
+    "groups_members_new": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/members/new"
+    },
+    "groups_members_create": {
+        "verb": "POST",
+        "path": "/groups/v1/groups/{id}/members"
+    },
+    "groups_members_update": {
+        "verb": "PUT",
+        "path": "/groups/v1/groups/{id}/members/{id}"
+    },
+    "membertypes_list": {
+        "verb": "GET",
+        "path": "/groups/v1/membertypes"
+    },
+    "membertypes_show": {
+        "verb": "GET",
+        "path": "/groups/v1/membertypes/{id}"
+    },
+    "prospects_new": {
+        "verb": "POST",
+        "path": "/groups/v1/prospects/new"
+    },
+    "groups_prospects_create": {
+        "verb": "POST",
+        "path": "/groups/v1/groups/{id}/prospects"
+    },
+    "groups_events_list": {
+        "verb": "GET",
+        "path": "/groups/v1/groups/{id}/events"
+    },
+    "daterangetypes_list": {
+        "verb": "GET",
+        "path": "/groups/v1/daterangetypes"
+    },
+    "daterangetypes_show": {
+        "verb": "GET",
+        "path": "/groups/v1/daterangetypes/{id}"
+    },
+    "genders_list": {
+        "verb": "GET",
+        "path": "/groups/v1/genders"
+    },
+    "genders_show": {
+        "verb": "GET",
+        "path": "/groups/v1/genders/{id}"
+    },
+    "maritalstatuses_list": {
+        "verb": "GET",
+        "path": "/groups/v1/maritalstatuses"
+    },
+    "maritalstatuses_show": {
+        "verb": "GET",
+        "path": "/groups/v1/maritalstatuses/{id}"
+    },
+    "timezones_list": {
+        "verb": "GET",
+        "path": "/groups/v1/timezones"
+    },
+    "timezones_show": {
+        "verb": "GET",
+        "path": "/groups/v1/timezones/{id}"
+    },
+    "events_list": {
+        "verb": "GET",
+        "path": "/events/v1/events"
+    },
+    "events_show": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}"
+    },
+    "events_edit": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/edit"
+    },
+    "events_update": {
+        "verb": "PUT",
+        "path": "/events/v1/events/{id}"
+    },
+    "events_schedules_list": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/schedules"
+    },
+    "events_schedules_show": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/schedules/{id}"
+    },
+    "events_schedules_edit": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/schedules/{id}/edit"
+    },
+    "events_schedules_new": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/schedules/new"
+    },
+    "events_schedules_create": {
+        "verb": "POST",
+        "path": "/events/v1/events/{id}/schedules"
+    },
+    "events_schedules_update": {
+        "verb": "PUT",
+        "path": "/events/v1/events/{id}/schedules/{id}"
+    },
+    "events_locations_list": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/locations"
+    },
+    "events_locations_show": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/locations/{id}"
+    },
+    "events_locations_edit": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/locations/{id}/edit"
+    },
+    "events_locations_new": {
+        "verb": "GET",
+        "path": "/events/v1/events/{id}/locations/new"
+    },
+    "events_locations_create": {
+        "verb": "POST",
+        "path": "/events/v1/events/{id}/locations"
+    },
+    "events_locations_update": {
+        "verb": "PUT",
+        "path": "/events/v1/events/{id}/locations/{id}"
+    },
+    "recurrencetypes_list": {
+        "verb": "GET",
+        "path": "/events/v1/recurrencetypes"
+    },
+    "recurrencetypes_show": {
+        "verb": "GET",
+        "path": "/events/v1/recurrencetypes/{id}"
+    },
+    "people_attributes_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{peopleID}/Attributes/{id}"
+    },
+    "people_attributes_list": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Attributes"
+    },
+    "people_attributes_show": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Attributes/{id}"
+    },
+    "people_attributes_create": {
+        "verb": "POST",
+        "path": "/v1/People/{peopleID}/Attributes"
+    },
+    "people_attributes_new": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Attributes/New"
+    },
+    "people_attributes_edit": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Attributes/{id}/Edit"
+    },
+    "people_attributes_delete": {
+        "verb": "DELETE",
+        "path": "/v1/People/{peopleID}/Attributes/{id}"
+    }
+}
