@@ -2,6 +2,11 @@
 Fellowship One API
 ==============
 
+<b>Update: Repo offically forked and adopted by Fellowship One.</b>
+
+New Location: https://github.com/fellowshiptech/f1api-php5
+
+
 Fellowship One API Implentation (http://developer.fellowshipone.com/)
 --------------
 
