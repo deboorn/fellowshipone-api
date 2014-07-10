@@ -300,7 +300,12 @@ class API
             $data = null;
         }
         if (($method == OAUTH_HTTP_METHOD_PUT || $method == OAUTH_HTTP_METHOD_POST) && (gettype($data) == "array" || gettype($data) == "object")) {
-            $data = json_encode($data);
+            if ($contentType == "xml" || (!$contentType && $this->contentType == "xml")) {
+                $data = (string)$data;
+            } else {
+                $data = json_encode($data);
+            }
+            $this->d($data);
         }
         if (!$contentType) $contentType = "application/$this->contentType";
 
@@ -308,7 +313,10 @@ class API
             $o = new \OAuth($this->settings->key, $this->settings->secret, OAUTH_SIG_METHOD_HMACSHA1);
             $o->disableSSLChecks();
             $o->setToken($this->accessToken->oauth_token, $this->accessToken->oauth_token_secret);
-            $headers = array('Content-Type' => $contentType,);
+            $headers = array(
+                'Content-Type'   => $contentType,
+                'Content-Length' => strlen($data),
+            );
             if ($o->fetch($url, $data, $method, $headers)) {
                 if (str_replace("json", "", $contentType) != $contentType) {
                     if (!$returnHeaders) return json_decode($o->getLastResponse(), true);
@@ -319,7 +327,7 @@ class API
                 }
             }
         } catch (\OAuthException $e) {
-            if ((int)$this->error['code'] >= 400 && $retryCount <= 2) { //retry 3 times
+            if ((int)$this->error['code'] >= 411 && $retryCount <= 2) { //retry 3 times
                 sleep(2);
                 return $this->fetch($url, $data, $method, $contentType, $returnHeaders, ($retryCount + 1));
             }
