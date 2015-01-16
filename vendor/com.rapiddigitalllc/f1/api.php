@@ -106,7 +106,7 @@ class API
      * @param array $settings =null
      * @returns void
      */
-    public function forge($settings = null)
+    public static function forge($settings = null)
     {
         $self = new self($settings);
         if ($self->settings->username && $self->settings->password) {
