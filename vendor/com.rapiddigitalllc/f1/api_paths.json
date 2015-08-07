@@ -642,5 +642,35 @@
     "people_attributes_delete": {
         "verb": "DELETE",
         "path": "/v1/People/{peopleID}/Attributes/{id}"
+    },
+
+    "people_communications_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{peopleID}/Communications/{id}"
+    },
+    "people_communications_list": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Communications"
+    },
+    "people_communications_show": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Communications/{id}"
+    },
+    "people_communications_create": {
+        "verb": "POST",
+        "path": "/v1/People/{peopleID}/Communications"
+    },
+    "people_communications_new": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Communications/New"
+    },
+    "people_communications_edit": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Communications/{id}/Edit"
+    },
+    "people_communications_delete": {
+        "verb": "DELETE",
+        "path": "/v1/People/{peopleID}/Communications/{id}"
     }
+
 }
