@@ -75,6 +75,18 @@
         "verb": "PUT",
         "path": "/v1/Addresses/{id}"
     },
+    "people_addresses_edit": {
+        "verb": "GET",
+        "path": "/v1/People/{peopleID}/Addresses/{id}/edit"
+    },
+    "people_addresses_update": {
+        "verb": "PUT",
+        "path": "/v1/People/{peopleID}/Addresses/{id}"
+    },
+    "people_addresses_create": {
+        "verb": "POST",
+        "path": "/v1/People/{peopleID}/Addresses"
+    },
     "people_attributegroups_list": {
         "verb": "GET",
         "path": "/v1/People/AttributeGroups"
@@ -162,6 +174,10 @@
     "people_statuses_substatuses_show": {
         "verb": "GET",
         "path": "/v1/People/Statuses/{statusID}/SubStatuses/{id}"
+    },
+    "requirements_list": {
+        "verb": "GET",
+        "path": "/v1/Requirements"
     },
     "requirements_show": {
         "verb": "GET",
