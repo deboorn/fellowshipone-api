@@ -97,6 +97,9 @@ class API
      */
     public function __construct($settings = null)
     {
+        if (!class_exists('OAuth')) {
+            throw new Exception("OAuth Not Installed.");
+        }
         $this->settings = $settings ? (object)$settings : (object)$this->settings;
         $this->loadApiPaths();
     }
@@ -106,7 +109,7 @@ class API
      * @param array $settings =null
      * @returns void
      */
-    public static function forge($settings = null)
+    public function forge($settings = null)
     {
         $self = new self($settings);
         if ($self->settings->username && $self->settings->password) {
@@ -137,6 +140,9 @@ class API
         $this->d($args);
         if (count($args) > 0 && gettype($args[0]) != "array" && gettype($args[0]) != "object") $this->pathIds[] = array_shift($args);
         if (isset($this->paths[$this->endpointId])) {
+            if($this->contentType == "html" && is_array($args)){
+                $args[] = array_pop($this->pathIds);
+            }
             $r = $this->invoke($this->endpointId, $this->paths[$this->endpointId]['verb'], $this->paths[$this->endpointId]['path'], $this->pathIds, current($args));
             $this->reset();
             return $r;
@@ -173,6 +179,16 @@ class API
     }
 
     /**
+     * set content type to html
+     */
+    public function html()
+    {
+        $this->contentType = 'html';
+        return $this;
+    }
+
+
+    /**
      * returns parsed path with ids (if any)
      * @param string $path
      * @param array $ids
@@ -204,6 +220,9 @@ class API
         $path = $this->parsePath($path, $ids);
         $this->d("Invoke[$id]: {$verb} {$path}", $params);
         $url = "{$this->settings->baseUrl}{$path}.{$this->contentType}";
+        if($this->contentType == "html"){
+            $url = "{$this->settings->baseUrl}{$path}";
+        }
         $this->response = $this->fetch($url, $params, $verb);
         $this->d($this->response);
         return $this;
@@ -302,16 +321,19 @@ class API
         if (($method == OAUTH_HTTP_METHOD_PUT || $method == OAUTH_HTTP_METHOD_POST) && (gettype($data) == "array" || gettype($data) == "object")) {
             if ($contentType == "xml" || (!$contentType && $this->contentType == "xml")) {
                 $data = (string)$data;
-            } else {
+            } else if ($contentType == "json" || (!$contentType && $this->contentType == "json")) {
                 $data = json_encode($data);
-            }
+            }// else html content or other content not required to be formatted
+
             $this->d($data);
         }
-        if (!$contentType) $contentType = "application/$this->contentType";
+        if (!$contentType){
+            $contentType = ($this->contentType != "html" ? "application" : "text") . "/$this->contentType";
+        }
 
         try {
             $o = new \OAuth($this->settings->key, $this->settings->secret, OAUTH_SIG_METHOD_HMACSHA1);
-            $o->disableSSLChecks();
+            //$o->disableSSLChecks();
             $o->setToken($this->accessToken->oauth_token, $this->accessToken->oauth_token_secret);
             $headers = array(
                 'Content-Type'   => $contentType,
@@ -327,10 +349,10 @@ class API
                 }
             }
         } catch (\OAuthException $e) {
-            if ((int)$this->error['code'] >= 411 && $retryCount <= 2) { //retry 3 times
-                sleep(2);
-                return $this->fetch($url, $data, $method, $contentType, $returnHeaders, ($retryCount + 1));
-            }
+//            if ((int)$this->error['code'] >= 412 && $retryCount <= 2) { //retry 3 times
+//                sleep(2);
+//                return $this->fetch($url, $data, $method, $contentType, $returnHeaders, ($retryCount + 1));
+//            }
 
             $extra = array(
                 'data'       => $data,
@@ -339,6 +361,7 @@ class API
                 'headers'    => $o->getLastResponseHeaders(),
                 'retryCount' => $retryCount,
             );
+
             throw new Exception($e->getMessage(), $e->getCode(), $o->getLastResponse(), $extra, $e);
 
         }
@@ -392,6 +415,7 @@ class API
      */
     protected function getAccessToken($username, $cacheType, $custoHandlers)
     {
+        $toekn = null;
         switch ($cacheType) {
             case self::TOKEN_CACHE_FILE:
                 $token = $this->getFileAccessToken($username);
@@ -406,7 +430,7 @@ class API
                     $token = call_user_func($custoHandlers['getAccessToken']);
                 }
         }
-        if ($token) return $token;
+        return $token;
     }
 
     /**
