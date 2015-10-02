@@ -307,9 +307,9 @@
         "verb": "GET",
         "path": "/giving/v1/batches/batchtypes/{id}"
     },
-    "contributionreceipts_search{parameter}_search": {
+    "contributionreceipts_search_search": {
         "verb": "GET",
-        "path": "/giving/v1/contributionreceipts/search{parameter}"
+        "path": "/giving/v1/contributionreceipts/search"
     },
     "contributionreceipts_show": {
         "verb": "GET",
